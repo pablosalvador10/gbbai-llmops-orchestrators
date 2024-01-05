@@ -1,32 +1,31 @@
-# Azure AI services Quick Start Accelerator <img src="./utils/images/azure_logo.png" alt="Azure Logo" style="width:30px;height:30px;"/>
-Welcome to the Azure AI Quick Start Accelerator! This repository is designed as a rapid launchpad for your complex AI systems projects, harnessing the power of Azure AI services. Tailored for both enterprise and academic environments, this accelerator integrates best practices to ensure a seamless development journey from start to finish.
+# Guide to Orchestrating Large Language Models (LLMs) <img src="./utils/images/azure_logo.png" alt="Azure Logo" style="width:30px;height:30px;"/>
 
+This repository provides comprehensive guidance on building end-to-end AI applications using Large Language Models (LLMs) and other Azure AI technologies. It covers various orchestration strategies, offering a roadmap from the initial setup to the deployment of sophisticated LLM applications in the Azure environment.
 
+## Orchestrators to Build Large Language Models (LLMs)
 
-## 🌟 Goal
-The primary goal of this Accelerator is to provide a quick start for developing and deploying complex AI solutions using Azure AI services. It acts as a comprehensive guide for both novices and seasoned professionals, enabling the efficient establishment, deployment, and management of sophisticated AI systems.
+LLMs like Azure's AI services, are versatile for tasks including translation, summarization, and question answering. However, their complexity demands a fine balance of resources and tools. Starting from scratch can lead to extra overhead and technical debt. To mitigate this, LLM Orchestrators have emerged, simplifying application building and integrating into AI application layers for accelerated development.
 
-## 💼 Contributing: Your Gateway to Advanced AI Development & Collaboration!
+#### 🔄 Comparing LLM Orchestration Frameworks 
 
-Eager to make significant contributions? Our **[CONTRIBUTING](./CONTRIBUTING.md)** guide is your essential resource! It lays out a clear path for:
+- **Prompt Flow** is a low-level orchestration tool, ideal for creating and debugging AI flows, especially for interactions with LLMs. Being a low-level tool, it provides more control and flexibility to developers. It allows developers to directly manipulate the underlying systems and processes. However, it may require more time and expertise to use effectively.
 
-- **🔄 Development Workflow**: Familiarize yourself with our optimized workflow, designed to foster effective collaboration and a focus on product-centric development.
+- **Langchain** and **Semantic Kernel** are high-level frameworks. They excel in complex applications, offering more out-of-the-box tools and integrations, primarily in Python and JavaScript (Langchain) and C# and Python (Semantic Kernel). High-level frameworks abstract away many of the complexities of the underlying systems, making them easier to use for developers. They provide built-in functionalities and are generally more user-friendly. However, they may offer less flexibility and control compared to low-level tools.
 
-- **🚀 Advanced AI Development Process**: Dive into the specifics of managing complex AI projects, from issue reporting to pull requests, all while adhering to best practices in advanced feature development and complex system troubleshooting.
+### Prompt Flow: A Low-Level Orchestration Tool
+Prompt Flow is an essential suite of tools for LLM-based AI application development. It aids in creating, developing, and evaluating AI applications, providing a streamlined path from concept to production. As a low-level tool, it requires a deeper understanding of the underlying systems but offers more control and customization options.
 
-- **🔍 Testing & QA for AI Systems**: Explore the importance of rigorous testing in AI projects and discover efficient development and testing techniques tailored for AI systems with tools like Jupyter Notebooks and `%%ipytest`.
+### Langchain and Semantic Kernel: High-Level Frameworks
+Langchain and Semantic Kernel are two standout high-level LLM frameworks, each with unique features and use cases. They abstract away many of the complexities of the underlying systems, providing a more user-friendly interface. They come with a variety of built-in tools and integrations, making them ideal for complex applications. However, they may not offer as much flexibility for custom plugin chaining as low-level tools like Prompt Flow.
 
-- **🔢 Version & Branching Strategies for AI Projects**: Understand our versioning system and explore the project’s branching strategy, which ensures smooth transitions between development, staging, and production, especially for AI-driven applications.
-
-- To stay updated with the latest developments and document significant changes to this project, please refer to [CHANGELOG.md](CHANGELOG.md).
-
-
+## 💼 Contributing
++ Want to contribute? Check our **[CONTRIBUTING](./CONTRIBUTING.md)** guide!
+- For latest updates and significant changes, see [CHANGELOG.md](CHANGELOG.md).
 
 ## 🌲 Project Tree Structure
 
 ```
-📂 ml-project-template
-┣ 📂 docs <- Documentation for the project. README
+📂 gbbai-llmops-orchestrators
 ┣ 📂 notebooks <- For development, EDA, and quick testing (Jupyter notebooks for analysis and development). README
 ┣ 📂 pipelines <- Orchestrates with Azure Pipeline/Airflow for ML workflows. More in README.
 ┣ 📦 src <- Houses main source code for data processing, feature engineering, modeling, inference, and evaluation. README
@@ -40,10 +39,5 @@ Eager to make significant contributions? Our **[CONTRIBUTING](./CONTRIBUTING.md)
 ┣ 📜 pyproject.toml <- Configuration file for build system requirements and packaging-related metadata.
 ┣ 📜 README.md <- Overview, setup instructions, and usage details of the project.
 ┣ 📜 requirements-codequality.txt <- Requirements for code quality tools and libraries.
-┣ 📜 requirements-pipelines.txt <- Requirements for pipeline-related dependencies.
 ┣ 📜 requirements.txt <- General project dependencies.
 ```
-
-##  👨🏽‍💻 System Design and Architecture
-
-## CI/CD

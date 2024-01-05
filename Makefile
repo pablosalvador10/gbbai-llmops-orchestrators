@@ -75,6 +75,7 @@ create_conda_env:
 activate_conda_env:
 	@echo "Creating conda environment"
 	conda activate document-intelligence
+
 run_pylint:
 	@echo "Running linter"
 	find . -type f -name "*.py" ! -path "./tests/*" | xargs pylint -disable=logging-fstring-interpolation > utils/pylint_report/pylint_report.txt
