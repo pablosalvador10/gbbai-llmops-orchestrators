@@ -21,7 +21,7 @@ nodes:
   type: python
   source:
     type: code
-    path: ../../../../../../src/gbb_ai/promptflow_utils/components/entraid/generate_id.py
+    path: ../../../../src/promptflow_utils/components/entraid/generate_id.py
   inputs: {}
 - name: content_safety
   type: python
@@ -39,14 +39,14 @@ nodes:
   type: python
   source:
     type: code
-    path: ../../../../../../src/gbb_ai/promptflow_utils/components/content_safety/extract_suggested_action.py
+    path: ../../../../src/promptflow_utils/components/content_safety/extract_suggested_action.py
   inputs:
     safety_result: ${content_safety.output}
 - name: store_input_cosmos_db
   type: python
   source:
     type: code
-    path: ../../../../../../src/gbb_ai/promptflow_utils/components/cosmosdb/cosmos_db_store_inputs.py
+    path: ../../../../src/promptflow_utils/components/cosmosdb/cosmos_db_store_inputs.py
   inputs:
     chat_id: ${generate_chat_id.output}
     safety_target: ${content_safety.output}
@@ -54,11 +54,12 @@ nodes:
     input_str: ${inputs.question}
     cosmos_container: Teradyne
     cosmos_database: chat-promptflow
+  aggregation: false
 - name: grounding_bing
   type: python
   source:
     type: code
-    path: ../../../../../../src/gbb_ai/promptflow_utils/components/bing_search/web_search.py
+    path: ../../../../src/promptflow_utils/components/bing_search/web_search.py
   inputs:
     query: ${inputs.question}
     refine_query: (site:teradyne.com OR related:similar sites OR site:wikipedia.org)
@@ -67,7 +68,7 @@ nodes:
   type: python
   source:
     type: code
-    path: ../../../../../../src/gbb_ai/promptflow_utils/components/bing_search/format_reason_context.py
+    path: ../../../../src/promptflow_utils/components/bing_search/format_reason_context.py
   inputs:
     data: ${grounding_bing.output}
 - name: prompt_engineering
@@ -92,7 +93,7 @@ nodes:
   type: python
   source:
     type: code
-    path: ../../../../../../src/gbb_ai/promptflow_utils/components/azure_search/azure_search_semantic.py
+    path: ../../../../src/promptflow_utils/components/azure_search/azure_search_semantic.py
   inputs:
     index_name: index-teradyne-web
     search_query: ${inputs.question}

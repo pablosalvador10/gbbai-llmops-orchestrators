@@ -1,5 +1,7 @@
 # Guide to Orchestrating Large Language Models (LLMs) <img src="./utils/images/azure_logo.png" alt="Azure Logo" style="width:30px;height:30px;"/>
 
+> This is an early preview and will undergo modifications and changes until the open-source release at the end of February.
+
 This repository provides comprehensive guidance on building end-to-end AI applications using Large Language Models (LLMs) and other Azure AI technologies. It covers various orchestration strategies, offering a roadmap from the initial setup to the deployment of sophisticated LLM applications in the Azure environment.
 
 ## Orchestrators to Build Large Language Models (LLMs)
@@ -27,8 +29,8 @@ Langchain and Semantic Kernel are two standout high-level LLM frameworks, each w
 ```
 📂 gbbai-llmops-orchestrators
 ┣ 📂 notebooks <- For development, EDA, and quick testing (Jupyter notebooks for analysis and development). README
-┣ 📂 pipelines <- Orchestrates with Azure Pipeline/Airflow for ML workflows. More in README.
-┣ 📦 src <- Houses main source code for data processing, feature engineering, modeling, inference, and evaluation. README
+┣ 📂 orchestrators <- Sample projects using the three orchestrators mentioned above.
+┣ 📦 src <- Houses main source code.
 ┣ 📂 test <- Runs unit and integration tests for code validation and QA. Check README.
 ┣ 📂 utils <- Contains utility functions and shared code used throughout the project. Detailed info in README
 ┣ 📜 .pre-commit-config.yaml <- Config for pre-commit hooks ensuring code quality and consistency.

@@ -21,8 +21,8 @@
       "index": 2
     },
     "store_input_cosmos_db": {
-      "x": 381.33331298828125,
-      "y": 278.66666412353516,
+      "x": 362,
+      "y": 282,
       "index": 3
     },
     "generate_chat_id": {
@@ -56,8 +56,8 @@
       "index": 7
     },
     "search_top_k_content": {
-      "x": 643.5,
-      "y": 309.33331298828125,
+      "x": 599.5,
+      "y": 282,
       "index": 9
     },
     "generate_embedding": {
