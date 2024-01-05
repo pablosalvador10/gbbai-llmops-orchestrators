@@ -1,0 +1,70 @@
+{
+  "nodeLayouts": {
+    "inputs": {
+      "x": 488.5,
+      "y": 62,
+      "index": -1
+    },
+    "outputs": {
+      "x": 599.5,
+      "y": 722,
+      "index": -1
+    },
+    "content_safety": {
+      "x": 12,
+      "y": 172,
+      "index": 1
+    },
+    "extract_suggest_actions": {
+      "x": 12,
+      "y": 282,
+      "index": 2
+    },
+    "store_input_cosmos_db": {
+      "x": 381.33331298828125,
+      "y": 278.66666412353516,
+      "index": 3
+    },
+    "generate_chat_id": {
+      "x": 362,
+      "y": 172,
+      "index": 0
+    },
+    "chat_llm": {
+      "x": 599.5,
+      "y": 612,
+      "index": 10
+    },
+    "grounding_bing": {
+      "x": 1005,
+      "y": 172,
+      "index": 4
+    },
+    "prompt_engineering": {
+      "x": 1005,
+      "y": 392,
+      "index": 6
+    },
+    "prepare_output_grounding": {
+      "x": 1005,
+      "y": 282,
+      "index": 5
+    },
+    "grounding_llm": {
+      "x": 1005,
+      "y": 502,
+      "index": 7
+    },
+    "search_top_k_content": {
+      "x": 643.5,
+      "y": 309.33331298828125,
+      "index": 9
+    },
+    "generate_embedding": {
+      "x": 655,
+      "y": 172,
+      "index": 8
+    }
+  },
+  "orientation": "Vertical"
+}

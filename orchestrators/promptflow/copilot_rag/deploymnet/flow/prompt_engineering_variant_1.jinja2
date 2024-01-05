@@ -1,0 +1,55 @@
+Task Description:
+You are to evaluate a bulk of context in a question-answering task using a specific evaluation metric. Your role is to determine how well a question aligns with the given context and assign an appropriate score based on this assessment.
+
+Evaluation Metric:
+
+5: The question follows logically from the context provided.
+1: The question contradicts or is logically false given the context.
+2-4: Assign an integer between 2 and 4 if the question's accuracy is ambiguous, or if it's not possible to determine the truth value without additional information. If no such score seems appropriate, default to 1.
+Output Format:
+
+After scoring each context-question pair in the dictionary, return only those with a score above 3. The output should be in a list the context-question pairs that meet the criteria. The output should be in the following format:
+
+1. [context][score]
+2. [context][score]
+
+Important Notes:
+
+Ensure that your evaluation is based solely on the information provided in the context.
+The presence of symbols or computer-generated elements in the answer should not negatively impact your assessment.
+Your output should include the list of content and context but should not repeat the answer.
+
+Read the passage of information thoroughly and select the correct answer from the three answer labels. Read the CONTEXT thoroughly to ensure you know what the CONTEXT entails.
+
+
+## Example Task #1 Input:
+[{"CONTEXT": "Some are reported as not having been wanted at all.", "Question": "Are all reported as being completely and fully wanted?"},
+{"CONTEXT": "In Quebec, an allophone is a resident, usually an immigrant, whose mother tongue or home language is neither French nor English.", "Question": "What is the common lenguage in Quebec?"},
+{"CONTEXT": "The Academy Awards, also known as the Oscars are awards for artistic and technical merit for the film industry. They are presented annually by the Academy of Motion Picture Arts and Sciences, in recognition of excellence in cinematic achievements as assessed by the Academy's voting membership. The Academy Awards are regarded by many as the most prestigious, significant awards in the entertainment industry in the United States and worldwide.", "Question": Are the Oscar a very important awards in the entertainment industry in the United States and it's also significant worldwide ?"}]
+## Example Task #1 Output:
+1. In Quebec, an allophone is a resident, usually an immigrant, whose mother tongue or home language is neither French nor English. Score: 5
+2. The Academy Awards, also known as the Oscars are awards for artistic and technical merit for the film industry. They are presented annually by the Academy of Motion Picture Arts and Sciences, in recognition of excellence in cinematic achievements as assessed by the Academy's voting membership. The Academy Awards are regarded by many as the most prestigious, significant awards in the entertainment industry in the United States and worldwide. Score: 5
+
+## Example Task #2 Input:
+[{"CONTEXT": "In Quebec, an allophone is a resident, usually an immigrant, whose mother tongue or home language is neither French nor English.", "Question": "What is the common lenguage in Quebec?"}]
+## Example Task #2 Output:
+
+## Example Task #2 Input:
+[{"CONTEXT": "In Quebec, an allophone is a resident, usually an immigrant, whose mother tongue or home language is neither French nor English.", "Question": "What is the common lenguage in Quebec?"}]
+## Example Task #2 Output:
+
+## Example Task #3 Input:
+[{"CONTEXT": "The Great Wall of China is a series of fortifications that were built across the historical northern borders of ancient Chinese states and Imperial China as protection against various nomadic groups from the Eurasian Steppe. Several walls were built from as early as the 7th century BC, with selective stretches later joined together by Qin Shi Huang (220–206 BC), the first emperor of China. Little of the Qin wall remains. Later on, many successive dynasties have built and maintained multiple stretches of border walls. The most well-known sections of the wall were built by the Ming dynasty (1368–1644).", "Question": "Did Qin Shi Huang build the entire Great Wall of China?"},
+{"CONTEXT": "The Mona Lisa is a portrait painting by Italian artist Leonardo da Vinci that has been described as 'the best known, the most visited, the most written about, the most sung about, the most parodied work of art in the world'. The painting is thought to be a portrait of Lisa Gherardini, the wife of Francesco del Giocondo, and is in oil on a white Lombardy poplar panel. It had been believed to have been painted between 1503 and 1506; however, Leonardo may have continued working on it as late as 1517.", "Question": "Is the Mona Lisa a self-portrait of Leonardo da Vinci?"},
+{"CONTEXT": "The Beatles were an English rock band formed in Liverpool in 1960. With a line-up comprising John Lennon, Paul McCartney, George Harrison and Ringo Starr, they are regarded as the most influential band of all time. The group were integral to the development of 1960s counterculture and popular music's recognition as an art form. Rooted in skiffle, beat and 1950s rock and roll, their sound incorporated elements of classical music and traditional pop in innovative ways; the band later explored music styles ranging from ballads and Indian music to psychedelia and hard rock.", "Question": "Were all the members of the rolling stones born in Spain?"}]
+## Example Task #3 Output:
+1. The Great Wall of China is a series of fortifications that were built across the historical northern borders of ancient Chinese states and Imperial China as protection against various nomadic groups from the Eurasian Steppe. Several walls were built from as early as the 7th century BC, with selective stretches later joined together by Qin Shi Huang (220–206 BC), the first emperor of China. Little of the Qin wall remains. Later on, many successive dynasties have built and maintained multiple stretches of border walls. The most well-known sections of the wall were built by the Ming dynasty (1368–1644). Score: 5
+2. The Mona Lisa is a portrait painting by Italian artist Leonardo da Vinci that has been described as 'the best known, the most visited, the most written about, the most sung about, the most parodied work of art in the world'. The painting is thought to be a portrait of Lisa Gherardini, the wife of Francesco del Giocondo, and is in oil on a white Lombardy poplar panel. It had been believed to have been painted between 1503 and 1506; however, Leonardo may have continued working on it as late as 1517. Score: 5
+Reminder: The return values for each task should be a list of ALL these context with a score above 3. If there are no context with a score above 3, return an empty list.
+
+## Actual Task Input:
+{{input}}
+
+Actual Task Output:
+
+Reminder: The return values for each task should be a list of ALL these context with a score above 3. If there are no context with a score above 3, return an empty list.

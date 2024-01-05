@@ -1,4 +1,4 @@
-name: llmops-orchestrators
+name: promplflow-copilot-rag
 channels:
   - conda-forge
   - defaults
@@ -8,5 +8,5 @@ dependencies:
   - pip
   - ipykernel
   - pip:
+    - -r ../../../requirements-codequality.txt
     - -r requirements.txt
-    - -r requirements-codequality.txt
